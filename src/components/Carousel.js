@@ -19,8 +19,8 @@ const Carousel = ({items, handleCategoryClick}) => {
   }
 
   const visibleItems = items.slice(currentIndex, currentIndex + itemsPerSlide).map((item, index) => (
-    <div key={index} className='border border-gray-400 py-1 px-2 rounded-lg shadow-lg cursor-pointer' onClick={() => handleCategoryClick(item)}>
-      {item}
+    <div key={index} className='border border-gray-400 py-1 px-2 rounded-lg shadow-lg cursor-pointer' onClick={() => handleCategoryClick(item.slug)}>
+      {item.slug}
     </div>
   ))
 
